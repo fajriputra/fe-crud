@@ -29,7 +29,7 @@ const ListProduct = () => {
   return (
     <>
       <Link to="/product/create">
-        <button className="btn-link">+ TAMBAH PRODUK</button>
+        <button className="btn">+ TAMBAH PRODUK</button>
       </Link>
 
       <table>
