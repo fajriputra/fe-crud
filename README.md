@@ -2,5 +2,5 @@
 
 live demo crud app - https://fe-crud-arkademy.netlify.app
  
-![Screenshot from 2021-07-21 09-13-48](https://user-images.githubusercontent.com/72371119/126420103-6e40d786-97d4-45c6-94e4-70aeac9c0237.png)
+![Screenshot from 2021-07-21 09-56-26](https://user-images.githubusercontent.com/72371119/126423529-c1fc432f-ca84-4cf7-a39d-d9d66e989e6e.png)
 
