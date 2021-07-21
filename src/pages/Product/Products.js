@@ -59,9 +59,12 @@ const Products = () => {
             >
               SINGLE PRODUCT
             </div>
-            <div className="single-product">Name : {product.name}</div>
-            <div className="single-product">Price : {product.price}</div>
-            <div className="single-product">Stock : {product.stock}</div>
+            <div className="single-product">Nama Produk : {product.name}</div>
+            <div className="single-product">
+              Keterangan : {product.description}
+            </div>
+            <div className="single-product">Harga : {product.price}</div>
+            <div className="single-product">Jumlah : {product.stock}</div>
             <div className="single-product">
               Status : {product.status ? "on" : "off"}
             </div>
