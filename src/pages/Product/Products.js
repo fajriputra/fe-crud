@@ -34,7 +34,7 @@ const Products = () => {
   }, [productId]);
 
   const handleDelete = async (id) => {
-    if (window.confirm("yakin mau dihapus?")) {
+    if (window.confirm("produk ini mau dihapus?")) {
       try {
         const response = await axios.delete(`${apiHost}/product/` + id);
 
@@ -51,17 +51,29 @@ const Products = () => {
 
   return (
     <>
-      <h2>Halaman Single Product</h2>
       {product && (
         <>
-          <div>Name : {product.name}</div>
-          <div>Price : {product.price}</div>
-          <div>Stock : {product.stock}</div>
-          <div>Status : {product.status ? "on" : "off"}</div>
-          <button onClick={() => handleDelete(product._id)}> delete </button>
+          <div className="wrapper">
+            <div
+              style={{ marginBottom: 10, fontWeight: 600, letterSpacing: 2 }}
+            >
+              SINGLE PRODUCT
+            </div>
+            <div className="single-product">Name : {product.name}</div>
+            <div className="single-product">Price : {product.price}</div>
+            <div className="single-product">Stock : {product.stock}</div>
+            <div className="single-product">
+              Status : {product.status ? "on" : "off"}
+            </div>
+            <button onClick={() => history.push("/product")} className="btn">
+              back
+            </button>
+            <button onClick={() => handleDelete(product._id)} className="btn">
+              delete
+            </button>
+          </div>
         </>
       )}
-      <button onClick={() => history.push("/product")}> &laquo; back </button>
     </>
   );
 };

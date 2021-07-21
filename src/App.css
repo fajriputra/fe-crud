@@ -4,35 +4,31 @@
 
 .App ul.menu {
   list-style: none;
-  padding: 5px 5px 5px 15px;
-  margin: 0;
-  position: relative;
-  background-color: #efefef;
-  border-bottom: 2px solid #aaa;
+  padding-left: 15px;
+  margin: 50px auto 30px;
 }
 
 .App ul.menu li {
   display: inline-block;
-  margin: 15px 5px 0 0;
+  margin-right: 10px;
 }
 
 .App ul.menu li a {
   text-decoration: none;
-  color: #ccc;
-  border: 2px solid #aaa;
-  border-radius: 5px 5px 0 0;
-  padding: 5px;
-  background-color: white;
+  color: #ffffff;
+  background-color: #009879;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  padding: 12px 30px;
+  letter-spacing: 1px;
 }
 
 .App ul.menu li a:hover {
-  background-color: lightyellow;
-}
-
-.App ul.menu li a.active {
-  text-decoration: none;
+  background-color: transparent;
   color: #666;
-  border-bottom: 2px solid #fff;
+  border: 1px solid #009879;
 }
 
 .App .main {
@@ -43,11 +39,6 @@
   color: #666;
 }
 
-.App .main button {
-  padding: 5px;
-  margin: 5px;
-}
-
 .App .main button:hover {
   background-color: whitesmoke;
   cursor: pointer;
@@ -55,18 +46,54 @@
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-th {
-  background-color: #eee;
+table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  /* text-align: left; */
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 5px;
+table th,
+table td {
+  padding: 12px 15px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #009879;
+}
+
+a button.btn-link {
+  padding: 12px;
+  background-color: #009879;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+a button.btn-link:hover {
+  color: #000000;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
 }
 
 .center {
@@ -76,10 +103,48 @@ td {
 form > label {
   display: block;
   margin-top: 10px;
-  font-size: 90%;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #cacaca;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
 }
 
 form > input,
 form > select {
   padding: 5px;
+}
+
+.wrapper {
+  max-width: 300px;
+  box-shadow: 0 0 10px #009879;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.single-product {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: #009879;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  color: #000000;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:first-of-type {
+  margin-right: 5px;
 }

@@ -60,54 +60,68 @@ const Update = () => {
 
   return (
     <>
-      <h2>Halaman Form Update Product</h2>
+      <div className="wrapper">
+        <form>
+          <div style={{ marginBottom: 10, fontWeight: 600, letterSpacing: 2 }}>
+            UPDATE PRODUCT
+          </div>
+          <div style={{ marginBottom: 10, paddingRight: 10 }}>
+            <label>Nama Produk </label>
+            <input
+              type="text"
+              value={product.name}
+              onChange={(e) => handleChange(e, "name")}
+            />
+          </div>
 
-      <form>
-        <label>Nama Produk </label>
-        <input
-          type="text"
-          size={50}
-          value={product.name}
-          onChange={(e) => handleChange(e, "name")}
-        />
+          <div style={{ marginBottom: 10, paddingRight: 10 }}>
+            <label>Keterangan </label>
+            <input
+              type="text"
+              value={product.description}
+              onChange={(e) => handleChange(e, "description")}
+            />
+          </div>
+          <div style={{ marginBottom: 10, paddingRight: 10 }}>
+            <label>Harga </label>
+            <input
+              type="number"
+              value={product.price}
+              onChange={(e) => handleChange(e, "price")}
+            />
+          </div>
 
-        <label>Keterangan </label>
-        <input
-          type="text"
-          size={50}
-          value={product.description}
-          onChange={(e) => handleChange(e, "description")}
-        />
+          <div style={{ marginBottom: 10, paddingRight: 10 }}>
+            {" "}
+            <label>Jumlah </label>
+            <input
+              type="number"
+              size={30}
+              value={product.stock}
+              onChange={(e) => handleChange(e, "stock")}
+            />
+          </div>
 
-        <label>Harga </label>
-        <input
-          type="number"
-          value={product.price}
-          onChange={(e) => handleChange(e, "price")}
-        />
+          <div style={{ marginBottom: 10, paddingRight: 10 }}>
+            {" "}
+            <label>Status </label>
+            <select
+              value={product.status}
+              onChange={(e) => handleChange(e, "status")}
+            >
+              <option value={false}>off</option>
+              <option value={true}>on</option>
+            </select>
+          </div>
 
-        <label>Jumlah </label>
-        <input
-          type="number"
-          size={30}
-          value={product.stock}
-          onChange={(e) => handleChange(e, "stock")}
-        />
-
-        <label>Status </label>
-        <select
-          value={product.status}
-          onChange={(e) => handleChange(e, "status")}
-        >
-          <option value={false}>off</option>
-          <option value={true}>on</option>
-        </select>
-
-        <label></label>
-        <button onClick={handleSubmit}> update </button>
-      </form>
-
-      <button onClick={() => history.push("/product")}> &laquo; back </button>
+          <button onClick={() => history.push("/product")} className="btn">
+            back
+          </button>
+          <button onClick={handleSubmit} className="btn">
+            update
+          </button>
+        </form>
+      </div>
     </>
   );
 };

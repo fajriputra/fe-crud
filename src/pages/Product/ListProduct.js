@@ -28,7 +28,9 @@ const ListProduct = () => {
 
   return (
     <>
-      <Link to="/product/create">+ TAMBAH PRODUK</Link>
+      <Link to="/product/create">
+        <button className="btn-link">+ TAMBAH PRODUK</button>
+      </Link>
 
       <table>
         <thead>
@@ -54,7 +56,7 @@ const ListProduct = () => {
                   <td className="center">{product.price}</td>
                   <td className="center">{product.stock}</td>
                   <td className="center">
-                    <Link to={`/product/update/${product._id}`}> update </Link>
+                    <Link to={`/product/update/${product._id}`}> Update </Link>
                   </td>
                 </tr>
               );
